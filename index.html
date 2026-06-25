@@ -1,163 +1,242 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NextGen Tech | O Futuro do Código</title>
-    <style>
-        /* Reset e Base Dark */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nexus Tech | Portal</title>
 
-        body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: #0b0e14; 
-            color: #e2e8f0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        /* Container Principal */
-        .card-portal {
-            max-width: 500px;
-            width: 100%;
-            background: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 24px;
-            overflow: visible; /* Permite que a logo saia um pouco para fora */
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-        }
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:#0b0e14;
+    color:#e2e8f0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+}
 
-        /* Header Curvo Moderno */
-        .header-tech {
-            background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
-            padding: 50px 20px;
-            text-align: center;
-            color: #fff;
-            border-radius: 24px 24px 0 0;
-        }
+.card-portal{
+    width:100%;
+    max-width:600px;
+    background:#161b22;
+    border:1px solid #30363d;
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:0 20px 40px rgba(0,0,0,.5);
+}
 
-        .header-tech h1 {
-            font-size: 1.8rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-        }
+.header-tech{
+    background:linear-gradient(135deg,#00d2ff,#3a7bd5);
+    text-align:center;
+    padding:50px 20px;
+    color:white;
+}
 
-        /* CONFIGURAÇÃO DA LOGO (A imagem que você enviou) */
-        .logo-container {
-            display: flex;
-            justify-content: center;
-            margin-top: -50px; /* Faz a logo subir para cima do azul */
-        }
+.header-tech h1{
+    letter-spacing:3px;
+    margin-bottom:10px;
+}
 
-        .img-logo {
-            width: 120px;       /* Tamanho menor e controlado */
-            height: 120px;
-            object-fit: contain; /* Garante que a logo não distorça */
-            background: #161b22;
-            padding: 15px;
-            border-radius: 50%;
-            border: 4px solid #161b22;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-        }
+.logo-container{
+    display:flex;
+    justify-content:center;
+    margin-top:-50px;
+}
 
-        /* Conteúdo */
-        .main-content {
-            padding: 20px 30px 40px 30px;
-            text-align: center;
-        }
+.img-logo{
+    width:120px;
+    height:120px;
+    object-fit:cover;
+    border-radius:50%;
+    background:#161b22;
+    border:5px solid #161b22;
+    padding:10px;
+    box-shadow:0 10px 25px rgba(0,0,0,.4);
+}
 
-        .tag {
-            color: #00d2ff;
-            font-size: 0.75rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            display: block;
-            margin-bottom: 10px;
-        }
+.main-content{
+    padding:25px;
+}
 
-        .artigo h2 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            color: #fff;
-        }
+.artigo{
+    padding:20px;
+    border-radius:18px;
+    background:#1c2128;
+    margin-bottom:25px;
+    transition:.3s;
+}
 
-        .meta-info {
-            font-size: 0.8rem;
-            color: #8b949e;
-            margin-bottom: 20px;
-        }
+.artigo:hover{
+    transform:translateY(-4px);
+}
 
-        .resumo {
-            line-height: 1.6;
-            color: #afbac4;
-            margin-bottom: 30px;
-        }
+.tag{
+    color:#00d2ff;
+    font-size:.8rem;
+    font-weight:bold;
+    text-transform:uppercase;
+}
 
-        /* Botões de Like/Fogo */
-        .botoes-acao {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
+.artigo h2{
+    margin:10px 0;
+    color:white;
+}
 
-        .btn {
-            background: #21262d;
-            border: 1px solid #30363d;
-            color: #c9d1d9;
-            padding: 8px 18px;
-            border-radius: 12px;
-            cursor: pointer;
-            transition: 0.3s;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
+.meta-info{
+    color:#8b949e;
+    font-size:.85rem;
+    margin-bottom:15px;
+}
 
-        .btn:hover {
-            background: #30363d;
-            transform: translateY(-3px);
-        }
-    </style>
+.resumo{
+    line-height:1.6;
+    color:#c9d1d9;
+    margin-bottom:20px;
+}
+
+.botoes-acao{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+}
+
+.btn{
+    background:#21262d;
+    border:1px solid #30363d;
+    color:white;
+    padding:10px 20px;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.25s;
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.btn:hover{
+    background:#30363d;
+}
+
+.btn.clicado{
+    transform:scale(1.15);
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    color:#8b949e;
+    font-size:.8rem;
+}
+</style>
 </head>
+
 <body>
 
-    <div class="card-portal">
-        <header class="header-tech">
-            <h1>Nexus Tech</h1>
-            <p>Conectando ideias ao futuro</p>
-        </header>
+<div class="card-portal">
 
-        <!-- AREA DA LOGO -->
-        <div class="logo-container">
-            <!-- COLOQUE O NOME DO SEU ARQUIVO DE IMAGEM NO SRC ABAIXO -->
-            <img src="logo.jpg" class="img-logo" alt="Logo de Tecnologia">
-        </div>
+    <header class="header-tech">
+        <h1>NEXUS TECH</h1>
+        <p>Conectando ideias ao futuro</p>
+    </header>
 
-        <main class="main-content">
-            <article class="artigo">
-                <span class="tag">Inovação • Web Dev</span>
-                <h2>Explorando a Web 3.0</h2>
-                <p class="meta-info">Postado por <strong>Julia Dorociaki</strong></p>
-                
-                <p class="resumo">
-                    Como a descentralização está mudando a forma como construímos 
-                    interfaces e gerenciamos dados de usuários no dia a dia.
-                </p>
-
-                <div class="botoes-acao">
-                    <button class="btn">❤️ <span>28</span></button>
-                    <button class="btn">🔥 <span>15</span></button>
-                </div>
-            </article>
-        </main>
+    <div class="logo-container">
+        <img src="logo.jpg" alt="Logo" class="img-logo">
     </div>
+
+    <main class="main-content">
+
+        <!-- POST 1 -->
+        <article class="artigo">
+            <span class="tag">Inovação • Web Dev</span>
+
+            <h2>Explorando a Web 3.0</h2>
+
+            <p class="meta-info">
+                Postado por <strong>Julia Dorociaki</strong>
+            </p>
+
+            <p class="resumo">
+                Como a descentralização está mudando a forma como
+                construímos interfaces e gerenciamos dados de usuários.
+            </p>
+
+            <div class="botoes-acao">
+                <button class="btn contador">
+                    ❤️ <span>28</span>
+                </button>
+
+                <button class="btn contador">
+                    🔥 <span>15</span>
+                </button>
+            </div>
+        </article>
+
+        <!-- POST 2 -->
+        <article class="artigo">
+            <span class="tag">Tecnologia • IA</span>
+
+            <h2>O Impacto da Inteligência Artificial</h2>
+
+            <p class="meta-info">
+                Postado por <strong>Carlos Mendes</strong>
+            </p>
+
+            <p class="resumo">
+                A IA está transformando empresas, automatizando tarefas
+                e criando novas oportunidades para profissionais.
+            </p>
+
+            <div class="botoes-acao">
+                <button class="btn contador">
+                    ❤️ <span>42</span>
+                </button>
+
+                <button class="btn contador">
+                    🔥 <span>21</span>
+                </button>
+            </div>
+        </article>
+
+    </main>
+
+    <footer>
+        © 2025 Nexus Tech
+    </footer>
+
+</div>
+
+<script>
+const botoes = document.querySelectorAll(".contador");
+
+botoes.forEach(botao => {
+
+    botao.addEventListener("click", () => {
+
+        const numero = botao.querySelector("span");
+
+        let valor = parseInt(numero.textContent);
+
+        numero.textContent = valor + 1;
+
+        botao.classList.add("clicado");
+
+        setTimeout(() => {
+            botao.classList.remove("clicado");
+        }, 200);
+
+    });
+
+});
+</script>
 
 </body>
 </html>

@@ -127,7 +127,10 @@ body{
 }
 
 .btn.clicado{
-    transform:scale(1.15);
+    background:#00d2ff;
+    color:#0b0e14;
+    border-color:#00d2ff;
+    transform:scale(1.08);
 }
 
 footer{
@@ -219,29 +222,30 @@ const botoes = document.querySelectorAll(".contador");
 
 botoes.forEach((botao) => {
 
-    let clicado = false;
+    const numero = botao.querySelector("span");
+
+    // Todos os contadores começam em 0
+    numero.textContent = "0";
+
+    let curtiu = false;
 
     botao.addEventListener("click", () => {
 
-        // Permite apenas um clique
-        if (clicado) return;
+        let valor = parseInt(numero.textContent);
 
-        clicado = true;
-
-        const numero = botao.querySelector("span");
-        numero.textContent = parseInt(numero.textContent) + 1;
-
-        // Animação
-        botao.classList.add("clicado");
-
-        // Desabilita o botão
-        botao.disabled = true;
-        botao.style.cursor = "default";
-        botao.style.opacity = "0.8";
-
-        setTimeout(() => {
+        if (!curtiu) {
+            // Curtir
+            valor++;
+            curtiu = true;
+            botao.classList.add("clicado");
+        } else {
+            // Descurtir
+            valor--;
+            curtiu = false;
             botao.classList.remove("clicado");
-        }, 200);
+        }
+
+        numero.textContent = valor;
 
     });
 

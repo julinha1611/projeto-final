@@ -217,17 +217,27 @@ footer{
 <script>
 const botoes = document.querySelectorAll(".contador");
 
-botoes.forEach(botao => {
+botoes.forEach((botao) => {
+
+    let clicado = false;
 
     botao.addEventListener("click", () => {
 
+        // Permite apenas um clique
+        if (clicado) return;
+
+        clicado = true;
+
         const numero = botao.querySelector("span");
+        numero.textContent = parseInt(numero.textContent) + 1;
 
-        let valor = parseInt(numero.textContent);
-
-        numero.textContent = valor + 1;
-
+        // Animação
         botao.classList.add("clicado");
+
+        // Desabilita o botão
+        botao.disabled = true;
+        botao.style.cursor = "default";
+        botao.style.opacity = "0.8";
 
         setTimeout(() => {
             botao.classList.remove("clicado");
